@@ -321,6 +321,16 @@ class ADS7828
     /// Factory pre-set slave address.
     static const uint8_t BASE_ADDRESS_ = 0x48;
 };
+
+namespace speed {
+  enum mode
+  {
+    standard = 100000,    // 100 KHz
+    fast = 400000,        // 400 KHz
+    highSpeed = 3400000   // 3.4 MHz
+  };
+}
+
 #endif
 /// \example examples/one_device/one_device.ino
 /// \example examples/two_devices/two_devices.ino

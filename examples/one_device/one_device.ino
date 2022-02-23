@@ -41,8 +41,8 @@ void setup()
   // enable serial monitor
   Serial.begin(19200);
 
-  // enable I2C communication
-  ADS7828::begin();
+  // enable I2C communication at 400 KHz
+  ADS7828::begin(speed::fast);
 
   // adjust scaling on an individual channel basis
   ambientTemp->minScale = 0;

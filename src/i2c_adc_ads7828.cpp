@@ -514,9 +514,10 @@ uint8_t ADS7828::update(uint8_t ch)
 /// }
 /// ...
 /// \endcode
-void ADS7828::begin()
+void ADS7828::begin(long speed)
 {
-  Wire.begin();
+  wire.setClock(speed);
+  wire.begin();
 }
 
 
